@@ -24,6 +24,10 @@ header.Header {
                 text-transform: uppercase;
                 color: var(--tonic);
                 font-size: 12px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
