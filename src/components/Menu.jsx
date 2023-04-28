@@ -1,8 +1,6 @@
-import './Menu.css'
-
-export default function Menu () {
+function Menu () {
     return (
-        <nav className='Menu'>
+        <nav className='app-navigation'>
             <ul>
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">A Propos</a></li>
@@ -10,3 +8,5 @@ export default function Menu () {
         </nav>
     )
 }
+
+export default Menu
