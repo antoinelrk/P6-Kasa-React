@@ -7,8 +7,7 @@ RUN apk add --update --no-cache \
 tzdata \
 bash \
 nodejs \
-npm \
-serve
+npm
 
 ENV TZ Europe/Paris
 
