@@ -1,4 +1,4 @@
-function A_Propos () {
+function APropos () {
     return (
         <div className="a-propos">
             A Propos
@@ -6,4 +6,4 @@ function A_Propos () {
     )
 }
 
-export default A_Propos
+export default APropos

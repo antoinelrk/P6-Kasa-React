@@ -41,7 +41,9 @@ body {
 
         @import 'header';
 
-        section {
+        main {
+            display: flex;
+            
             @import './home';
         }
     }

@@ -20,9 +20,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main>
-        <RouterProvider router={router} />
-      </main>
+      <RouterProvider router={router} />
     </div>
   );
 }
