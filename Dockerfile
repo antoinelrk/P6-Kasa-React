@@ -11,6 +11,6 @@ npm
 
 ENV TZ Europe/Paris
 
-# COPY ./ /usr/src/react-app
+COPY ./ /usr/src/react-app
 
 ENTRYPOINT ["/bin/bash", "run.sh"]
