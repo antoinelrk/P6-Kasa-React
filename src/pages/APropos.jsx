@@ -1,7 +1,7 @@
 function APropos () {
     return (
         <div className="a-propos">
-            A Propos
+            <ul>A Propos</ul>
         </div>
     )
 }
