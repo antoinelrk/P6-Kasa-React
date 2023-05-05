@@ -14,4 +14,4 @@ ENV TZ Europe/Paris
 
 COPY ./ /usr/src/react-app
 
-ENTRYPOINT ["/bin/bash", "serve -s ./build"]
+ENTRYPOINT ["/bin/bash", "run.sh"]
