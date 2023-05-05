@@ -1,0 +1,25 @@
+section.Location {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 256px;
+    border-radius: var(--section-brad);
+    overflow: hidden;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .6), transparent);
+
+    img.componentBackground {
+        position: absolute;
+        display: flex;
+        height: 256px;
+        object-fit: cover;
+        object-position: center;
+        mix-blend-mode: darken;
+        z-index: -1;
+    }
+
+    p.componentTitle {
+        margin: auto 1em 1em 1em;
+        color: white;
+        font-size: 18px;
+    }
+}
