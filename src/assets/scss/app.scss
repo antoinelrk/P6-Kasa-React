@@ -25,6 +25,7 @@ img {
 :root {
     --tonic: #FF6060;
     --section-brad: 10px;
+    --collapse-background: #F7F7F7;
 }
 
 body {
@@ -45,6 +46,7 @@ body {
             display: flex;
             
             @import './home';
+            @import './apropos';
         }
     }
 }
