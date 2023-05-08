@@ -25,6 +25,7 @@ img {
 :root {
     --tonic: #FF6060;
     --section-brad: 10px;
+    --collapse-background: #F7F7F7;
 }
 
 body {
@@ -43,8 +44,11 @@ body {
 
         @import 'header';
 
-        section {
+        main {
+            display: flex;
+            
             @import './home';
+            @import './apropos';
         }
     }
 }

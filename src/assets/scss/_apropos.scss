@@ -1,0 +1,10 @@
+&.a-propos {
+    flex-direction: column;
+    row-gap: 1.5em;
+
+    section {
+        img.banner {
+            border-radius: var(--section-brad);
+        }
+    }
+}

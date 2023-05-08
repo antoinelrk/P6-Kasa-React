@@ -1,28 +1,12 @@
 import Header from './components/Header.jsx';
-import Main from './components/Main.jsx'
-import ErrorPage from './components/ErrorPage.jsx'
-import routes from './Routes.js'
-
-import {
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom'
-
-const router = createBrowserRouter([
-    {
-      path: "/",
-      errorElement: <ErrorPage />,
-      children: routes
-    }
-])
+import { RouterProvider } from 'react-router-dom';
+import Router from './Router.jsx'
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <main>
-        <RouterProvider router={router} />
-      </main>
+      <RouterProvider router={Router} />
     </div>
   );
 }
