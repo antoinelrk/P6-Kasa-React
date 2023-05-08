@@ -23,11 +23,31 @@ section.Collapse {
         }
 
         button.CollapseRetract {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: transparent;
             border: none;
             width: 32px;
             height: 32px;
             color: white;
+
+            figure {
+                display: flex;
+                width: 50%;
+                height: 50%;
+                fill: white;
+
+                &.CaretDefault {
+                    transform: rotate(0);
+                    transition: transform .25s ease;
+                }
+
+                &.CaretRotated {
+                    transform: rotate(180deg);
+                    transition: transform .25s ease;
+                }
+            }
         }
     }
 
