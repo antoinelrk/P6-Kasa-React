@@ -1,5 +1,6 @@
 import Collapse from "../components/Collapse.jsx"
 import BackgroundImage from '../assets/images/tinywow_kalen-emsley-Bkci_8qcdvQ-unsplash 2_22483284.jpg'
+import Banner from "../components/Banner.jsx"
 
 function APropos () {
     const aboutData = [
@@ -25,11 +26,14 @@ function APropos () {
         <Collapse data={aboutElement}/>
     ))
 
+    let data = {
+        image: BackgroundImage,
+        alt: "Bonjour"
+    }
+
     return (
         <main className="a-propos">
-            <section>
-                <img className="banner" src={BackgroundImage} alt="Image de fond du premier composant" />
-            </section>
+            <Banner data={data} />
             {collapses}
         </main>
     )
