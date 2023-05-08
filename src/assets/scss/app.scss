@@ -31,6 +31,8 @@ body {
     display: flex;
     flex-direction: column;
 
+    @import 'errors';
+    
     .App {
         display: flex;
         flex-direction: column;
