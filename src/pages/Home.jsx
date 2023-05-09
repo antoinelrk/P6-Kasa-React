@@ -633,10 +633,12 @@ function Home () {
     return (
         <main className="home">
             <section className="home-image">
-                <img src={BackgroundImage} alt="Image de fond du premier composant" />
-                <p>Chez vous,<br/> partout et ailleur</p>
+                <img src={BackgroundImage} alt="Chez vous, partout et ailleur" />
+                <div className="text"><p>Chez vous,</p><p>partout et ailleur</p></div>
             </section>
-            {listLocation}
+            <div className="locations-wrapper">
+                {listLocation}
+            </div>
         </main>
     )
 }

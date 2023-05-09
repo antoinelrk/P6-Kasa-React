@@ -6,6 +6,7 @@ section.Location {
     border-radius: var(--section-brad);
     overflow: hidden;
     background-image: linear-gradient(to top, rgba(0, 0, 0, .6), transparent);
+    z-index: 56;
 
     img.componentBackground {
         position: absolute;
@@ -21,5 +22,16 @@ section.Location {
         margin: auto 1em 1em 1em;
         color: white;
         font-size: 18px;
+    }
+}
+
+@media screen and (min-width: "900px") {
+    section.Location {
+        width: 340px;
+        height: 340px;
+
+        img.componentBackground {
+            height: 100%;
+        }
     }
 }

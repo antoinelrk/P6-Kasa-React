@@ -29,7 +29,7 @@ function APropos () {
 
     return (
         <main className="a-propos">
-            <section>
+            <section className="image-banner">
                 <img className="banner" src={BackgroundImage} alt="Image de fond du premier composant" />
             </section>
             {collapses}

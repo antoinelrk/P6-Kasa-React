@@ -1,10 +1,17 @@
 &.a-propos {
     flex-direction: column;
     row-gap: 1.5em;
+    width: 100%;
 
-    section {
+    section.image-banner {
         img.banner {
             border-radius: var(--section-brad);
+        }
+    }
+
+    @media screen and (min-width: "900px") {
+        section.image-banner {
+            margin: 2em 0;
         }
     }
 }
