@@ -626,7 +626,7 @@ function Home () {
     
     const listLocation = locationData.map(
         (location) => (
-            <Location location={location} />
+            <Location key={location.id} location={location} />
         )
     )
 
