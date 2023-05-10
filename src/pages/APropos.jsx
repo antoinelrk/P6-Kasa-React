@@ -1,6 +1,6 @@
 import Collapse from "../components/Collapse.jsx"
 import BackgroundImage from '../assets/images/tinywow_kalen-emsley-Bkci_8qcdvQ-unsplash 2_22483284.jpg'
-import Banner from "../components/Banner.jsx"
+import { useState } from "react"
 
 function APropos () {
     const aboutData = [
@@ -21,19 +21,17 @@ function APropos () {
             content: "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
         },
     ]
+    const [data, setData] = useState(aboutData)
 
-    let collapses = aboutData.map((aboutElement) => (
-        <Collapse data={aboutElement}/>
+    let collapses = data.map((aboutElement) => (
+        <Collapse key={aboutElement.title} data={aboutElement}/>
     ))
-
-    let data = {
-        image: BackgroundImage,
-        alt: "Bonjour"
-    }
 
     return (
         <main className="a-propos">
-            <Banner data={data} />
+            <section className="image-banner">
+                <img className="banner" src={BackgroundImage} alt="Image de fond du premier composant" />
+            </section>
             {collapses}
         </main>
     )

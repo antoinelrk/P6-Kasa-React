@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Style from '../assets/scss/modules/Collapse.module.scss'
 
 function Collapse ({ data }) {
