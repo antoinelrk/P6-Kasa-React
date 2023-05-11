@@ -1,8 +1,7 @@
 import BackgroundImage from '../assets/images/tinywow_background_21429525.jpg'
 import Location from '../components/Location.jsx'
-import Gallery from '../components/Gallery.jsx'
 
-function Home () {
+export default function Home () {
     const locationData = JSON.parse(JSON.stringify(
         [
             {
@@ -643,5 +642,3 @@ function Home () {
         </main>
     )
 }
-
-export default Home

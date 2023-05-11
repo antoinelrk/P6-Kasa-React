@@ -2,7 +2,7 @@ import Collapse from "../components/Collapse.jsx"
 import BackgroundImage from '../assets/images/tinywow_kalen-emsley-Bkci_8qcdvQ-unsplash 2_22483284.jpg'
 import { useState } from "react"
 
-function APropos () {
+export default function About () {
     const aboutData = [
         {
             title: "Fiabilité",
@@ -36,5 +36,3 @@ function APropos () {
         </main>
     )
 }
-
-export default APropos
