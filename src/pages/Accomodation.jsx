@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import AccomodationErrors from './Errors/AccomodationErrors.jsx'
+import Carrousel from '../components/Carrousel.jsx'
 import Banner from '../components/Banner.jsx'
 
 export const Accomodation = () => {
@@ -35,7 +36,8 @@ export const Accomodation = () => {
     if (error) return <AccomodationErrors error={error}/>
     return (
         <main>
-            <Banner image={data?.cover} alt={data?.description}/>
+            <Carrousel images={data?.pictures} />
+            {/* <Banner image={data?.pictures[0]} alt={data?.description}/> */}
         </main>
     )
 }
