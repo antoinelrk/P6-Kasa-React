@@ -1,0 +1,17 @@
+ul.TagsList {
+    display: flex;
+    width: 50%;
+    column-gap: 1em;
+
+    li.Tag {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 9999px;
+        padding: 2px 40px;
+        width: auto;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        background-color: var(--tonic);
+    }
+}

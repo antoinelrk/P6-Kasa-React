@@ -2,7 +2,9 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import AccomodationErrors from './Errors/AccomodationErrors.jsx'
 import Carrousel from '../components/Carrousel.jsx'
-import Banner from '../components/Banner.jsx'
+import Style from '../assets/scss/modules/Accomodation.module.scss'
+import Tags from '../components/Tags.jsx'
+import AccomodationRating from '../components/AccomodationRating.jsx'
 
 export const Accomodation = () => {
     const url = `http://localhost:3001/accomodations`
@@ -34,10 +36,27 @@ export const Accomodation = () => {
     }, []);
 
     if (error) return <AccomodationErrors error={error}/>
+
     return (
-        <main>
+        <main className={Style.Accomodation}>
             <Carrousel images={data?.pictures} />
-            {/* <Banner image={data?.pictures[0]} alt={data?.description}/> */}
+            <section className={Style.FirstInformations}>
+                <section className={Style.Left}>
+                    <h1 className={Style.AccomodationTitle}>{data?.title}</h1>
+                    <h2 className={Style.AccomodationLocation}>{data?.location}</h2>
+                </section>
+                <section className={Style.Right}>
+                    <div className={Style.AccomodationHost}>
+                        <div className={Style.Name}>{data?.host.name}</div>
+                        <img className={Style.Avatar} src={data?.host.picture} />
+                    </div>
+                </section>
+            </section>
+
+            <section className={Style.SecondaryInformations}>
+                <Tags tags={data?.tags} />
+                <AccomodationRating stars={data?.rating} />
+            </section>
         </main>
     )
 }

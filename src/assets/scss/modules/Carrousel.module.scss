@@ -4,6 +4,7 @@ section.Carrousel {
     height: 256px;
     width: 100%;
     overflow: hidden;
+    border-radius: 1em;
     transition: transform .5s ease-in-out;
 
     ul.ListOfImages {
@@ -19,9 +20,9 @@ section.Carrousel {
             transition: transform .5s ease-in-out;
 
             img {
-                display: flex;
+                height: 100%;
+                width: 100%;
                 object-fit: cover;
-                object-position: center center;
                 transition: transform .5s ease-in-out;
             }
         }

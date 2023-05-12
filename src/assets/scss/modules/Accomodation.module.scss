@@ -1,0 +1,60 @@
+main.Accomodation {
+    display: flex;
+    flex-direction: column;
+
+    section.FirstInformations {
+        display: flex;
+        color: var(--tonic);
+        padding-top: 2em;
+
+        section.Left {
+            display: flex;
+            flex-direction: column;
+            row-gap: .5em;
+            width: 50%; 
+
+            h1.AccomodationTitle {
+                font-size: 36px;
+            }
+
+            h2.AccomodationLocation {
+                font-size: 18px;
+            }
+        }
+
+        section.Right {
+            display: flex;
+            width: 50%;
+            justify-content: right;
+
+            .AccomodationHost {
+                display: flex;
+                column-gap: 1em;
+
+                .Name {
+                    display: flex;
+                    margin-top: .5em;
+                    align-items: top;
+                    text-align: right;
+                    justify-content: right;
+                    font-size: 20px;
+                    width: 93px;
+                }
+
+                .Avatar {
+                    border-radius: 9999px;
+                    background-color: orange;
+                    width: 4em;
+                    height: 4em;
+                }
+            }
+        }
+    }
+
+    section.SecondaryInformations {
+        display: flex;
+        margin: 1em 0;
+        width: 100%;
+        height: 28px;
+    }
+}

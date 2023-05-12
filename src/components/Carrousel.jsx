@@ -13,7 +13,7 @@ export default function Carrousel ({ images }) {
                 elementVariable.current.scrollLeft = 0
                 sliderIndex = 0
             } else {
-                elementVariable.current.scrollLeft += elementVariable.current.offsetWidth
+                elementVariable.current.scrollLeft = Math.floor(elementVariable.current.scrollLeft + elementVariable.current.offsetWidth)
                 sliderIndex++
             }
         }
