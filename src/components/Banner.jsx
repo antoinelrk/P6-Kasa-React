@@ -1,9 +1,10 @@
 import Style from '../assets/scss/modules/Banner.module.scss'
 
-export default function Banner ({data}) {
+export default function Banner ({image, alt}) {
     return (
         <section className={Style.BannerImage}>
-            <img src={data.image} alt={data.alt} />
+            <img src={image} alt={alt} />
+            {/* TODO: Carousel */}
         </section>
     )
 }
