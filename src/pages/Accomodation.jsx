@@ -37,7 +37,7 @@ export const Accomodation = () => {
 
     if (error) return <AccomodationErrors error={error}/>
 
-    return (
+    return (data && (
         <main className={Style.Accomodation}>
             <Carrousel images={data?.pictures} />
             <section className={Style.FirstInformations}>
@@ -58,5 +58,5 @@ export const Accomodation = () => {
                 <AccomodationRating stars={data?.rating} />
             </section>
         </main>
-    )
+    ))
 }
