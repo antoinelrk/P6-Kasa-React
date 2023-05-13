@@ -38,8 +38,6 @@ export const Accomodation = () => {
 
     if (error) return <AccomodationErrors error={error}/>
 
-    console.log(data?.equipments)
-
     return (data && (
         <main className={Style.Accomodation}>
             <Carrousel images={data?.pictures} />
@@ -63,10 +61,10 @@ export const Accomodation = () => {
 
             <section className={Style.AccomodationWrappers}>
                 <section className={Style.Left}>
-                    <Collapse title="Equipements" list={data?.equipments}/>
+                    <Collapse text={data?.description} title="Description"/>
                 </section>
                 <section className={Style.Right}>
-                    <Collapse text={data?.description} title="Description"/>
+                    <Collapse title="Equipements" list={data?.equipments}/>
                 </section>
             </section>
         </main>
