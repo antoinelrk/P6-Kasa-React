@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Style from '../assets/scss/modules/Collapse.module.scss'
 
-function Collapse ({ data }) {
+function Collapse ({ text, title, list }) {
     /**
      * On défini la variable ainsi que le mutateur 
      */
@@ -14,16 +14,16 @@ function Collapse ({ data }) {
 
     let collapseContent = ""
 
-    if (Array.isArray(data.content)) {
-        collapseContent = data.content.map((entry) => (<ul><li>{entry}</li></ul>))
+    if (list) {
+        collapseContent = list.map((entry) => (<ul><li>{entry}</li></ul>))
     } else {
-        collapseContent = (<p className={Style.CollapseContent}>{data.content}</p>)
+        collapseContent = (<p className={Style.CollapseContent}>{text}</p>)
     }
 
     return (
         <section className={Style.Collapse}>
             <div className={Style.CollapseTitle}>
-                <h2>{data.title}</h2>
+                <h2>{title ?? ''}</h2>
                 <button onClick={handleToggle} className={Style.CollapseRetract}>
                     <figure className={isCollapsed ? Style.CaretRotated : Style.CaretDefault}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 448 512">
