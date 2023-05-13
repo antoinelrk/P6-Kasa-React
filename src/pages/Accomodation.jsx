@@ -5,6 +5,7 @@ import Carrousel from '../components/Carrousel.jsx'
 import Style from '../assets/scss/modules/Accomodation.module.scss'
 import Tags from '../components/Tags.jsx'
 import AccomodationRating from '../components/AccomodationRating.jsx'
+import Collapse from '../components/Collapse.jsx';
 
 export const Accomodation = () => {
     const url = `http://localhost:3001/accomodations`
@@ -37,6 +38,8 @@ export const Accomodation = () => {
 
     if (error) return <AccomodationErrors error={error}/>
 
+    console.log(data?.equipments)
+
     return (data && (
         <main className={Style.Accomodation}>
             <Carrousel images={data?.pictures} />
@@ -56,6 +59,15 @@ export const Accomodation = () => {
             <section className={Style.SecondaryInformations}>
                 <Tags tags={data?.tags} />
                 <AccomodationRating stars={data?.rating} />
+            </section>
+
+            <section className={Style.AccomodationWrappers}>
+                <section className={Style.Left}>
+                    <Collapse title="Equipements" list={data?.equipments}/>
+                </section>
+                <section className={Style.Right}>
+                    <Collapse text={data?.description} title="Description"/>
+                </section>
             </section>
         </main>
     ))
