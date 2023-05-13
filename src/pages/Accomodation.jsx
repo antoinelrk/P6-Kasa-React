@@ -42,21 +42,22 @@ export const Accomodation = () => {
         <main className={Style.Accomodation}>
             <Carrousel images={data?.pictures} />
             <section className={Style.FirstInformations}>
+
                 <section className={Style.Left}>
-                    <h1 className={Style.AccomodationTitle}>{data?.title}</h1>
-                    <h2 className={Style.AccomodationLocation}>{data?.location}</h2>
+                    <div className={Style.AccomodationTopInfo}>
+                        <h1 className={Style.AccomodationTitle}>{data?.title}</h1>
+                        <h2 className={Style.AccomodationLocation}>{data?.location}</h2>
+                    </div>
+                    <Tags tags={data?.tags} />
                 </section>
+
                 <section className={Style.Right}>
                     <div className={Style.AccomodationHost}>
                         <div className={Style.Name}>{data?.host.name}</div>
                         <img className={Style.Avatar} src={data?.host.picture} />
                     </div>
+                    <AccomodationRating stars={data?.rating} />
                 </section>
-            </section>
-
-            <section className={Style.SecondaryInformations}>
-                <Tags tags={data?.tags} />
-                <AccomodationRating stars={data?.rating} />
             </section>
 
             <section className={Style.AccomodationWrappers}>

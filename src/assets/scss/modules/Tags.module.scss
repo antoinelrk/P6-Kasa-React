@@ -1,17 +1,29 @@
 ul.TagsList {
     display: flex;
-    width: 50%;
+    width: 100%;
+    height: 24px;
     column-gap: 1em;
 
     li.Tag {
         display: flex;
         flex-wrap: wrap;
-        border-radius: 9999px;
-        padding: 2px 40px;
+        border-radius: 8px;
         width: auto;
+        padding: 0 24px;
         align-items: center;
         color: white;
-        font-size: 14px;
+        font-size: 10px;
         background-color: var(--tonic);
+    }
+}
+
+@media screen and (min-width: "900px") {
+    ul.TagsList {
+        height: 32px;
+        li.Tag {
+            border-radius: 12px;
+            padding: 2px 40px;
+            font-size: 14px;
+        }
     }
 }
