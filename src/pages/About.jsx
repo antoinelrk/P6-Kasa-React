@@ -24,7 +24,7 @@ export default function About () {
     const [data, setData] = useState(aboutData)
 
     let collapses = data.map((aboutElement) => (
-        <Collapse key={aboutElement.title} data={aboutElement}/>
+        <Collapse key={aboutElement.title} text={aboutElement.content} title={aboutElement.title}/>
     ))
 
     return (
