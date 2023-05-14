@@ -35,7 +35,7 @@ export default function Carrousel ({ images }) {
                     </li>
                 ))}
             </ul>
-            <p className={Style.ImagesCounter}>x/x</p>
+            <p className={Style.ImagesCounter}>{currentImage + 1}/{images.length}</p>
             <aside className={Style.ImagesControl}>
                 <button onClick={prevImage} className={Style.PreviousImage}>
                     <figure>
