@@ -5,25 +5,57 @@ section.Carrousel {
     width: 100%;
     overflow: hidden;
     border-radius: 1em;
-    transition: transform .5s ease-in-out;
+    z-index: 55;
 
     ul.ListOfImages {
         display: flex;
         overflow: hidden;
         width: 100%;
-        transition: transform .5s ease-in-out;
         scroll-behavior: smooth;
 
         li.ImageElement {
             flex-shrink: 0;
             width: 100%;
-            transition: transform .5s ease-in-out;
 
             img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                transition: transform .5s ease-in-out;
+            }
+        }
+    }
+
+    p.ImagesCounter {
+        position: absolute;
+        z-index: 56;
+        bottom: 1.5em;
+        left: 50%;
+        font-size: 18px;
+        color: white;
+        transform: translateX(-50%);
+    }
+
+    aside.ImagesControl {
+        display: flex;
+        position: absolute;
+        padding: 0 1.5em;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        height: 80px;
+        justify-content: space-between;
+
+        button.PreviousImage, button.NextImage {
+            display: flex;
+            height: 80px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            figure {
+                display: flex;
+                height: 100%;
             }
         }
     }
