@@ -1,25 +1,33 @@
-
-// Pages
+import App from './App.jsx'
 import Home from './pages/Home.jsx'
-import APropos from './pages/APropos.jsx'
-import ErrorPage from './components/ErrorPage.jsx'
-import { createBrowserRouter } from 'react-router-dom'
+import About from './pages/About.jsx'
+import {Accomodation} from './pages/Accomodation.jsx'
+import Errors from './pages/Errors.jsx'
+
+import { createBrowserRouter } from "react-router-dom";
 
 const routes = [
     {
-        path: `/`,
-        element: <Home />
+        path: "/",
+        element: <Home />,
+        errorElement: <Errors />,
     },
     {
-        path: `a-propos`,
-        element: <APropos />
+        path: "/accomodation/:id",
+        element: <Accomodation />
+    },
+    {
+        path: "/about",
+        element: <About />
     }
 ]
 
-export default createBrowserRouter([
+const router = createBrowserRouter([
     {
         path: "/",
-        errorElement: <ErrorPage />,
+        element: <App />,
         children: routes
     }
-])
+]);
+
+export default router

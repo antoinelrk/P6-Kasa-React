@@ -1,7 +1,7 @@
 import BackgroundImage from '../assets/images/tinywow_background_21429525.jpg'
 import Location from '../components/Location.jsx'
 
-function Home () {
+export default function Home () {
     const locationData = JSON.parse(JSON.stringify(
         [
             {
@@ -626,19 +626,19 @@ function Home () {
     
     const listLocation = locationData.map(
         (location) => (
-            <Location location={location} />
+            <Location key={location.id} location={location} />
         )
     )
 
     return (
         <main className="home">
             <section className="home-image">
-                <img src={BackgroundImage} alt="Image de fond du premier composant" />
-                <p>Chez vous,<br/> partout et ailleur</p>
+                <img src={BackgroundImage} alt="Chez vous, partout et ailleur" />
+                <div className="text"><p>Chez vous,</p><p>partout et ailleur</p></div>
             </section>
-            {listLocation}
+            <div className="locations-wrapper">
+                {listLocation}
+            </div>
         </main>
     )
 }
-
-export default Home

@@ -1,0 +1,36 @@
+section.Carrousel {
+    position: relative;
+    display: flex;
+    height: 256px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1em;
+    transition: transform .5s ease-in-out;
+
+    ul.ListOfImages {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        transition: transform .5s ease-in-out;
+        scroll-behavior: smooth;
+
+        li.ImageElement {
+            flex-shrink: 0;
+            width: 100%;
+            transition: transform .5s ease-in-out;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: transform .5s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: "900px") {
+    section.Carrousel {
+        height: 415px;
+    }
+}

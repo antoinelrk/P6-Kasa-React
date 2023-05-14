@@ -1,14 +1,12 @@
 import Header from './components/Header.jsx';
-import { RouterProvider } from 'react-router-dom';
-import Router from './Router.jsx'
+import { Outlet } from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Header />
-      <RouterProvider router={Router} />
+        <Outlet/>
+      {/* <Footer /> */}
     </div>
   );
 }
-
-export default App;
