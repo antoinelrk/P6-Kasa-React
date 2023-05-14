@@ -623,6 +623,11 @@ export default function Home () {
             }
             ]
     ))
+
+    /**
+     * TODO: Remplacer la data fixe par l'endpoint: https://api.kasa.antoinelrk.com/accomodations
+     * Voir `Accomodation.jsx`
+     */
     
     const listLocation = locationData.map(
         (location) => (

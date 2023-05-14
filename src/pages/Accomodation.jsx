@@ -8,7 +8,7 @@ import AccomodationRating from '../components/AccomodationRating.jsx'
 import Collapse from '../components/Collapse.jsx';
 
 export const Accomodation = () => {
-    const url = `http://localhost:3001/accomodations`
+    const url = `https://api.kasa.antoinelrk.com/accomodations`
     let urlParams = useParams()
     const [data, setData] = useState();
     const [error, setError] = useState()

@@ -4,8 +4,6 @@ import App from './App';
 import './assets/scss/app.scss'
 import { RouterProvider } from 'react-router-dom'
 import router from './Router.jsx'
-import dotenv from 'dotenv'
-dotenv.config()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
