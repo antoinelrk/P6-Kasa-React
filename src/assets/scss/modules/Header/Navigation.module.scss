@@ -1,0 +1,19 @@
+nav.AppNavigation {
+    display: flex;
+
+    ul {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        li a {
+            text-transform: uppercase;
+            color: var(--tonic);
+            font-size: 12px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

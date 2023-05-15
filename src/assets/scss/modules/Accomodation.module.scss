@@ -82,13 +82,11 @@ main.Accomodation {
 
 @media screen and (min-width: "900px") {
     main.Accomodation {
+        margin-top: 1em;
+        
         section.FirstInformations {
             flex-direction: row;
-        }
-        section.AccomodationWrappers {
-            flex-direction: row;
-            column-gap: 5em;
-    
+                
             section.Left {
                 width: 50%;
 
@@ -108,6 +106,7 @@ main.Accomodation {
 
                 .AccomodationHost {
                     flex-direction: row;
+                    margin-left: auto;
 
                     .Name {
                         font-size: 20px;
@@ -119,6 +118,11 @@ main.Accomodation {
                     }
                 }
             }
+        }
+        section.AccomodationWrappers {
+            flex-direction: row;
+            margin-top: 2em;
+            column-gap: 5em;
         }
     }
 }

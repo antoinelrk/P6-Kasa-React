@@ -8,7 +8,7 @@ import AccomodationRating from '../components/AccomodationRating.jsx'
 import Collapse from '../components/Collapse.jsx';
 
 export const Accomodation = () => {
-    const url = `http://localhost:3001/accomodations`
+    const url = `https://api.kasa.antoinelrk.com/accomodations`
     let urlParams = useParams()
     const [data, setData] = useState();
     const [error, setError] = useState()
@@ -23,6 +23,7 @@ export const Accomodation = () => {
                 case 200:
                     responseData = await response.json();
                     setData(responseData);
+                    document.title = `${responseData.title} | Kasa`
                     break;
                 case 404:
                     responseData = await response.text()
