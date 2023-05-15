@@ -11,8 +11,22 @@ nav.AppNavigation {
             color: var(--tonic);
             font-size: 12px;
 
+            &.active {
+                text-decoration: underline;
+            }
+            
             &:hover {
                 text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: "900px") {
+    nav.AppNavigation {
+        ul {
+            li a {
+                font-size: 16px;
             }
         }
     }
