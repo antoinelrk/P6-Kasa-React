@@ -9,6 +9,7 @@ export default function Home () {
     const [error, setError] = useState()
 
     useEffect(() => {
+        document.title = `Kasa`
         async function fetchData() {
             const response = await fetch(`${url}`)
 

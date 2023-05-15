@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { useParams, useRouteError } from "react-router-dom";
 
 export default function Errors() {
   const error = useRouteError()
+  useEffect(() => document.title = `La ressource n'a pas été trouvée ! | Erreur 404`)
 
   return (
     <div className="errors-page">
