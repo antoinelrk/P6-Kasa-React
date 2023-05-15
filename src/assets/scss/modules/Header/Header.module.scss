@@ -1,6 +1,7 @@
 header.Header {
     display: flex;
     justify-content: space-between;
-    width: auto;
+    width: 100%;
+    max-width: 1240px;
     height: 47px;
 }

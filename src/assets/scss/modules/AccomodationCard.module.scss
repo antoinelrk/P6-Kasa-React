@@ -1,9 +1,9 @@
-section.Location {
+section.AccomodationCard {
     position: relative;
     display: flex;
     height: 256px;
     
-    a.LocationLink {
+    a.AccomodationLink {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -34,7 +34,7 @@ section.Location {
 }
 
 @media screen and (min-width: "900px") {
-    section.Location {
+    section.AccomodationCard {
         width: 340px;
         height: 340px;
 

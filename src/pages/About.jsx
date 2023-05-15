@@ -1,6 +1,6 @@
 import Collapse from "../components/Collapse.jsx"
 import BackgroundImage from '../assets/images/tinywow_kalen-emsley-Bkci_8qcdvQ-unsplash 2_22483284.jpg'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function About () {
     const aboutData = [
@@ -26,6 +26,10 @@ export default function About () {
     let collapses = data.map((aboutElement) => (
         <Collapse key={aboutElement.title} text={aboutElement.content} title={aboutElement.title}/>
     ))
+
+    useEffect(() => {
+        document.title = `A Propos`
+    })
 
     return (
         <main className="a-propos">

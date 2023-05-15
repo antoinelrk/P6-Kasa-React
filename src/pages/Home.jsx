@@ -1,14 +1,15 @@
 import BackgroundImage from '../assets/images/tinywow_background_21429525.jpg'
-import Location from '../components/Location.jsx'
+import AccomodationCard from '../components/AccomodationCard.jsx'
 import { useState, useEffect } from 'react'
 import Error from './Errors.jsx'
 
 export default function Home () {
     const url = `https://api.kasa.antoinelrk.com/accomodations`
-    const [data, setData] = useState();
+    const [data, setData] = useState()
     const [error, setError] = useState()
 
     useEffect(() => {
+        document.title = `Kasa`
         async function fetchData() {
             const response = await fetch(`${url}`)
 
@@ -33,9 +34,9 @@ export default function Home () {
 
     if (error) return <Error error={error}/>
     
-    const listLocation = data?.map(
-        (location) => (
-            <Location key={location.id} location={location} />
+    const listAccomodations = data?.map(
+        (accomodation) => (
+            <AccomodationCard key={accomodation.id} accomodation={accomodation} />
         )
     )
 
@@ -46,7 +47,7 @@ export default function Home () {
                 <div className="text"><p>Chez vous,</p><p>partout et ailleur</p></div>
             </section>
             <div className="locations-wrapper">
-                {listLocation}
+                {listAccomodations}
             </div>
         </main>
     )
