@@ -23,6 +23,7 @@ export const Accomodation = () => {
                 case 200:
                     responseData = await response.json();
                     setData(responseData);
+                    document.title = `${responseData.title} | Kasa`
                     break;
                 case 404:
                     responseData = await response.text()
