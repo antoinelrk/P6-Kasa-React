@@ -52,14 +52,15 @@ body {
     .App {
         display: flex;
         flex-direction: column;
-        max-width: 1440px;
         width: 100%;
         min-height: 100vh;
-        padding: 20px;
         row-gap: 16px;
+        align-items: center;
+        padding: 20px 0 0 0;
 
         main {
             display: flex;
+            max-width: 1240px;
             width: 100%;
             
             @import './home';
@@ -68,7 +69,11 @@ body {
     }
     @media screen and (min-width: "900px") {
         .App {
-            padding: 40px 100px;
+            padding: 40px 0 0 0;
+            main {
+
+                // padding: 40px 100px;
+            }
         }
     }
 }
