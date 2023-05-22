@@ -1,0 +1,45 @@
+section.AccomodationCard {
+    position: relative;
+    display: flex;
+    height: 256px;
+    
+    a.AccomodationLink {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--section-brad);
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, .3), transparent);
+        overflow: hidden;
+        z-index: 90;
+
+        img.componentBackground {
+            position: absolute;
+            display: flex;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            mix-blend-mode: darken;
+            z-index: -1;
+        }
+    
+        p.componentTitle {
+            margin: auto 1em 1em 1em;
+            color: white;
+            font-size: 18px;
+            z-index: 57;
+        }
+    }
+}
+
+@media screen and (min-width: "900px") {
+    section.AccomodationCard {
+        width: 340px;
+        height: 340px;
+
+        img.componentBackground {
+            height: 100%;
+        }
+    }
+}

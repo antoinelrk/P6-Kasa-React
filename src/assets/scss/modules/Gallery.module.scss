@@ -1,0 +1,10 @@
+section.Gallery {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--collapse-background);
+    row-gap: 22px;
+
+    @media screen and (max-width: "400px") {
+        background-color: transparent;
+    }
+}

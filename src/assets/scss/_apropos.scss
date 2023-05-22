@@ -1,0 +1,21 @@
+&.a-propos {
+    flex-direction: column;
+    row-gap: 1.5em;
+    width: 100%;
+
+    section.image-banner {
+        img.banner {
+            border-radius: var(--section-brad);
+            height: 226px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    @media screen and (min-width: "900px") {
+        section.image-banner {
+            margin: 2em 0;
+            height: 226px;
+        }
+    }
+}
