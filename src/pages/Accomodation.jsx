@@ -1,6 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react'
-import AccomodationErrors from './Errors/AccomodationErrors.jsx'
 import Carrousel from '../components/Carrousel.jsx'
 import Style from '../assets/scss/modules/Accomodation.module.scss'
 import Tags from '../components/Tags.jsx'
@@ -10,8 +9,9 @@ import Collapse from '../components/Collapse.jsx';
 export const Accomodation = () => {
     const url = `https://api.kasa.antoinelrk.com/accomodations`
     let urlParams = useParams()
-    const [data, setData] = useState();
+    const [data, setData] = useState()
     const [error, setError] = useState()
+    const navigate = useNavigate()
 
     useEffect(() => {
         async function fetchData() {
@@ -37,7 +37,7 @@ export const Accomodation = () => {
         fetchData();
     }, []);
 
-    if (error) return <AccomodationErrors error={error}/>
+    if (error) navigate('/404')
 
     return (data && (
         <main className={Style.Accomodation}>

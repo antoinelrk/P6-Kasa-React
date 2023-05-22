@@ -1,12 +1,13 @@
+import { useNavigate } from 'react-router'
 import BackgroundImage from '../assets/images/tinywow_background_21429525.jpg'
 import AccomodationCard from '../components/AccomodationCard.jsx'
 import { useState, useEffect } from 'react'
-import Error from './Errors.jsx'
 
 export default function Home () {
     const url = `https://api.kasa.antoinelrk.com/accomodations`
     const [data, setData] = useState()
     const [error, setError] = useState()
+    const navigate = useNavigate()
 
     useEffect(() => {
         document.title = `Kasa`
@@ -32,7 +33,7 @@ export default function Home () {
         fetchData();
     }, []);
 
-    if (error) return <Error error={error}/>
+    if (error) navigate('/404')
     
     const listAccomodations = data?.map(
         (accomodation) => (

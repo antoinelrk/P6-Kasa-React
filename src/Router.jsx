@@ -3,14 +3,12 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import {Accomodation} from './pages/Accomodation.jsx'
 import Errors from './pages/Errors.jsx'
-
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, json, Navigate } from "react-router-dom"
 
 const routes = [
     {
         path: "/",
         element: <Home />,
-        errorElement: <Errors />,
     },
     {
         path: "/accomodation/:id",
@@ -19,6 +17,14 @@ const routes = [
     {
         path: "/about",
         element: <About />
+    },
+    {
+        path: "/404",
+        element: <Errors />
+    },
+    {
+        path: "/*",
+        element: <Navigate to="/404" />
     }
 ]
 
