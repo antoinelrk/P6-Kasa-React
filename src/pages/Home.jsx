@@ -31,14 +31,12 @@ export default function Home () {
             }
         }
         fetchData();
-    }, []);
+    }, [url]);
 
     if (error) navigate('/404')
     
-    const listAccomodations = data?.map(
-        (accomodation) => (
-            <AccomodationCard key={accomodation.id} accomodation={accomodation} />
-        )
+    const listAccomodations = data?.map((accomodation) =>
+        (<AccomodationCard key={accomodation.id} accomodation={accomodation} />)
     )
 
     return (

@@ -36,7 +36,9 @@ export default function About () {
             <section className="image-banner">
                 <img className="banner" src={BackgroundImage} alt="Image de fond du premier composant" />
             </section>
-            {collapses}
+            <section className="collapse-list">
+                {collapses}
+            </section>
         </main>
     )
 }

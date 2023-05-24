@@ -1,6 +1,5 @@
 &.a-propos {
     flex-direction: column;
-    row-gap: 1.5em;
     width: 100%;
 
     section.image-banner {
@@ -12,10 +11,22 @@
         }
     }
 
+    section.collapse-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5em;
+        row-gap: 1.5em;
+    }
+
     @media screen and (min-width: "900px") {
         section.image-banner {
             margin: 2em 0;
             height: 226px;
+        }
+
+        section.collapse-list {
+            margin: 0 auto;
+            width: 80%;
         }
     }
 }
