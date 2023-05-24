@@ -35,7 +35,7 @@ export const Accomodation = () => {
             }
         }
         fetchData();
-    }, []);
+    }, [url, urlParams]);
 
     if (error) navigate('/404')
 

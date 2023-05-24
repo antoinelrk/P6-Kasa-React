@@ -15,7 +15,7 @@ function Collapse ({ text, title, list }) {
     let collapseContent = ""
 
     if (list) {
-        collapseContent = (<ul> {list.map((entry) => (<li>{entry}</li>))} </ul>)
+        collapseContent = (<ul> {list.map((entry, index) => (<li key={index}>{entry}</li>))} </ul>)
     } else {
         collapseContent = (<p className={Style.CollapseContent}>{text}</p>)
     }
