@@ -13,13 +13,13 @@ export default function Carrousel ({ images }) {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            nextImage();
+            setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
         }, 3000);
 
         return () => {
             clearInterval(intervalId);
         };
-    }, [currentImage]);
+    }, [currentImage, setCurrentImage]);
     
     const transitionStyles = {
         transform: `translateX(-${currentImage * 100}%)`,
@@ -30,8 +30,8 @@ export default function Carrousel ({ images }) {
         <section className={Style.Carrousel}>
             <ul className={Style.ListOfImages}>
                 {images?.map((image, index) => (
-                    <li className={Style.ImageElement} style={transitionStyles}>
-                        <img key={index} src={image} alt="" />
+                    <li key={index} className={Style.ImageElement} style={transitionStyles}>
+                        <img key={index} src={image} alt={image} />
                     </li>
                 ))}
             </ul>
